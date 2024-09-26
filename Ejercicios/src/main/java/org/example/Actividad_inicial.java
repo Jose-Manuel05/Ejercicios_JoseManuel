@@ -18,7 +18,15 @@ public class Actividad_inicial {
         int num1 = entrada.nextInt();
         System.out.println("Introduce otro número:");
         int num2 = entrada.nextInt();
-        int resultado = num1 + num2;
-        System.out.println("El resultado de sumar los dos números es: " + resultado);
+
+        if (num1==0 || num2==0){
+            System.out.println("Error. Una suma no puede ser 0.");
+        }
+        else {
+
+            int resultado = num1 + num2;
+            System.out.println("El resultado de sumar los dos números es: " + resultado);
+
+        }
     }
 }
