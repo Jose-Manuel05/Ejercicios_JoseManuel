@@ -7,8 +7,9 @@ public class Actividad_inicial {
 
     public void ejecutar() {
 
-        System.out.println("Como te llamas?");
         Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Como te llamas?");
         String nombre = entrada.next();
 
         System.out.println("A que curso vas?");
