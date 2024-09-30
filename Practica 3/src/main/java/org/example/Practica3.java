@@ -1,10 +1,11 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Practica3 {
 
-    public void ejecutar() {
+    public void practica3() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,10 +16,15 @@ public class Practica3 {
 
         while (edad < 0) {
             System.out.println("Hola " + nombre + ". Introduce tu edad: ");
-            edad = scanner.nextInt();
+            try {
+                edad = scanner.nextInt();
 
-            if (edad < 0) {
-                System.out.println("La edad no puede ser negativa. Por favor, introduce una edad valida");
+                if (edad < 0) {
+                    System.out.println("La edad no puede ser negativa. Por favor, introduce una edad valida");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Error. Introduce un valor valido.");
+                scanner.next();
             }
         }
 
