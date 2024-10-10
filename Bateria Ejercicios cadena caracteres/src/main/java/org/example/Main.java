@@ -7,7 +7,8 @@ public class Main {
         //cadenaCaracteres.Ejercicio1();
         //cadenaCaracteres.Ejercicio2();
         //cadenaCaracteres.Ejercicio3();
-        cadenaCaracteres.Ejercicio4();
+        //cadenaCaracteres.Ejercicio4();
+        cadenaCaracteres.Ejercicio5();
 
     }
 }
