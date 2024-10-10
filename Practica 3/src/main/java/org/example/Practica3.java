@@ -22,7 +22,7 @@ public class Practica3 {
                 if (edad < 0) {
                     System.out.println("La edad no puede ser negativa. Por favor, introduce una edad valida");
                 }
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException error) {
                 System.out.println("Error. Introduce un valor valido.");
                 scanner.next();
             }

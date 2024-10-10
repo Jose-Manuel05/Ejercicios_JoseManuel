@@ -6,8 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Practica3 practica3 = new Practica3();
-        practica3.practica3();
+        /*Practica4 practica4 = new Practica4();
+        practica4.practica4();*/
+
+        ClaculadoraSimple calculadorasimple = new ClaculadoraSimple();
+        calculadorasimple.calculadoraSimple();
 
     }
 }
