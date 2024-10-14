@@ -25,7 +25,7 @@ public class Exepciones {
         }
 
         try {
-            
+
             num_entero = Integer.parseInt(numero);
             division = dividendo / num_entero;
 
