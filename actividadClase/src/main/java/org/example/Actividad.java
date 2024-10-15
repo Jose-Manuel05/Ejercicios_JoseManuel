@@ -14,6 +14,8 @@ public class Actividad {
         LocalDateTime hoy = LocalDateTime.now();
         int anyoActual = hoy.getYear();
 
+        String modo = teclado.next();
+
         System.out.println("Programa para calcular el año de nacimiento y la edad");
         System.out.println("1º Año de nacimiento");
         System.out.println("2º Edad");
@@ -24,54 +26,68 @@ public class Actividad {
 
         boolean error = false;
 
+        switch (modo){
+            case "1":
+                System.out.println("Introduce un año: ");
+                String anyoNacimiento = teclado.next();
 
-        if (opcion  .equals("1")) {
-
-            System.out.println("Introduce un año: ");
-            String anyoNacimiento = teclado.next();
-
-            try {
-                anyoNac = Integer.parseInt(anyoNacimiento);
-            }catch (NumberFormatException e){
-                System.out.println("Has introducido un formato erroneo. no es un numero. ");
-            }
-
-
-            if (anyoNac < 1900 || anyoNac > anyoActual){
-                System.out.println("El año introducido no es correcto");
-                error = true;
-            }
+                try {
+                    anyoNac = Integer.parseInt(anyoNacimiento);
+                }catch (NumberFormatException e){
+                    System.out.println("Has introducido un formato erroneo. no es un numero. ");
+                }
 
 
+                if (anyoNac < 1900 || anyoNac > anyoActual){
+                    System.out.println("El año introducido no es correcto");
+                    error = true;
+                }
+                break;
 
-        } else if (opcion.equals("2")) {
+            case "2":
 
-            int edad = 0;
+                int edad = 0;
 
-            System.out.println("Introduce una edad: ");
+                System.out.println("Introduce una edad: ");
 
-            if (teclado.hasNextInt()){
+                if (teclado.hasNextInt()){
 
-            }else {
-                System.out.println("La edad introducida no tiene un formato valido");
-            }
+                }else {
+                    System.out.println("La edad introducida no tiene un formato valido");
+                }
 
-            if (edad < 0){
-                System.out.println("La edad introducida no es valida. ");
-                error = true;
-            }else {
+                if (edad < 0){
+                    System.out.println("La edad introducida no es valida. ");
+                    error = true;
+                }else {
 
-                int anyo_nac = anyoActual - edad;
+                    int anyo_nac = anyoActual - edad;
 
-            }
+                }
+                break;
 
-
-
-        } else {
-
-            System.out.println("El modo introdicdo no es correcto.");
+            default:
+                System.out.println("El modo introdicdo no es correcto.");
+                break;
 
         }
+
+//        if (opcion  .equals("1")) {
+//
+//
+//
+//
+//
+//        } else if (opcion.equals("2")) {
+//
+//
+//
+//
+//
+//        } else {
+//
+//
+//        }
 
         if (error == false) {
 
