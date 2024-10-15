@@ -1,8 +1,6 @@
 package org.example;
 
 import java.time.LocalDateTime;
-import java.time.Year;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Actividad {
@@ -71,23 +69,6 @@ public class Actividad {
                 break;
 
         }
-
-//        if (opcion  .equals("1")) {
-//
-//
-//
-//
-//
-//        } else if (opcion.equals("2")) {
-//
-//
-//
-//
-//
-//        } else {
-//
-//
-//        }
 
         if (error == false) {
 
