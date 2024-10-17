@@ -26,18 +26,16 @@ public class calculadoraSimple {
             System.out.println("Introduce el operando (+, -, *, /, r (para la raiz cuadrada)): ");
             op = teclado.next();
 
-            System.out.println("Introduce el segundo numero: ");
-            num2 = teclado.nextInt();
-
-
-        }catch (InputMismatchException e){
-            System.out.println("Error, introduce un valor numerico correcto. " + e.getMessage());
+        }catch (InputMismatchException e1){
+            System.out.println("Error, introduce un valor numerico. " + e1.getMessage());
+            return;
         }
 
         if (op.equals("+") || op.equals("-") || op.equals("*") || op.equals("/") || op.equals("r")) {
             opValido = true;
         } else {
-            System.out.println("Erro, operador no válido.");
+            System.out.println("Error, operador no válido.");
+            return;
         }
 
         if (op.equals("r")) {
@@ -50,6 +48,13 @@ public class calculadoraSimple {
 
         }else {
 
+            try {
+                System.out.println("Introduce el segundo numero: ");
+                num2 = teclado.nextInt();
+            }catch (InputMismatchException e2){
+                System.out.println("Error Introduce un valor numerico. ");
+                return;
+            }
             switch (op) {
 
                 case "+":
@@ -69,9 +74,5 @@ public class calculadoraSimple {
                     break;
             }
         }
-
-
-
     }
-
 }
