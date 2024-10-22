@@ -19,13 +19,14 @@ public class Comprobador_ISBN {
         boolean caracterFaltante = false;
         int posicionPregunta = -1;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i <= 9; i++) {
             char caracter = isbn.charAt(i);
+
             if (caracter == '?') {
                 caracterFaltante = true;
                 posicionPregunta = i;
             } else {
-                int digito = (caracter == 'X' && i == 9) ? 10 : Character.getNumericValue(caracter);
+                int digito = (caracter == 'X' && i == 9) ? 10 : caracter - '0';
                 suma += digito * (10 - i);
             }
         }
