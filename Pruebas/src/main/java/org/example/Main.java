@@ -26,12 +26,15 @@ public class Main {
                 switch (opcionPrincipal) {
                     case 1:
                         menuBucles(bucles, teclado);
+                        volverMenu();
                         break;
                     case 2:
                         menuExcepciones(excepciones, teclado);
+                        volverMenu();
                         break;
                     case 3:
                         menuRandom(claseRandom, teclado);
+                        volverMenu();
                     case 11:
                         System.out.println("Saliendo del programa...");
                         break;
@@ -68,27 +71,35 @@ public class Main {
                 switch (opcionBucles) {
                     case 1:
                         bucles.ejercicio1();
+                        volverMenu();
                         break;
                     case 2:
                         bucles.ejercicio2();
+                        volverMenu();
                         break;
                     case 3:
                         bucles.ejercicio3();
+                        volverMenu();
                         break;
                     case 4:
                         bucles.ejercicio4();
+                        volverMenu();
                         break;
                     case 5:
                         bucles.ejercicio5();
+                        volverMenu();
                         break;
                     case 6:
                         bucles.ejercicio6();
+                        volverMenu();
                         break;
                     case 7:
                         bucles.ejercicio7();
+                        volverMenu();
                         break;
                     case 8:
                         bucles.ejercicio8();
+                        volverMenu();
                         break;
                     case 9:
                         System.out.println("Volviendo al Menú Principal...");
@@ -117,9 +128,11 @@ public class Main {
                 switch (opcionExcepciones) {
                     case 1:
                         excepciones.exepciones();
+                        volverMenu();
                         break;
                     case 2:
                         System.out.println("Volviendo al Menú Principal...");
+                        volverMenu();
                         break;
                     default:
                         System.out.println("Opción no válida. Elija entre 1 y 3.");
@@ -148,15 +161,19 @@ public class Main {
                 switch (opcionRandom){
                     case 1:
                         claseRandom.ejercicioRandom1();
+                        volverMenu();
                         break;
                     case 2:
                         claseRandom.ejercicioRandom2();
+                        volverMenu();
                         break;
                     case 3:
                         claseRandom.ejercicioRandom3();
+                        volverMenu();
                         break;
                     case 4:
                         claseRandom.ejercicioRandom4();
+                        volverMenu();
                         break;
                     case 5:
                         System.out.println("Volviendo al Menú Principal...");
@@ -169,5 +186,13 @@ public class Main {
             }
         }while (opcionRandom != 5);
 
+    }
+
+    public static void volverMenu() {
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Presiona enter para salir... ");
+        teclado.nextLine();
     }
 }

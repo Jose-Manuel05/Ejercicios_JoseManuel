@@ -7,7 +7,6 @@ public class Comprobador_ISBN {
     public void comprobador_ISBN() {
 
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Introduce el ISBN: ");
         String isbn = scanner.next();
 
@@ -30,7 +29,6 @@ public class Comprobador_ISBN {
                 suma += digito * (10 - i);
             }
         }
-
         if (caracterFaltante) {
             for (int digitoFaltante = 0; digitoFaltante <= 9; digitoFaltante++) {
 
