@@ -10,6 +10,7 @@ public class Main {
         Bucles bucles = new Bucles();
         Exepciones excepciones = new Exepciones();
         claseRandom claseRandom = new claseRandom();
+        bateriasProblemas_preExamen bateriasProblemasPreExamen = new bateriasProblemas_preExamen();
 
         do {
             // Menú Principal
@@ -17,7 +18,8 @@ public class Main {
             System.out.println("1. Menu Bucles");
             System.out.println("2. Menu Excepciones");
             System.out.println("3. Menu Random");
-            System.out.println("4. Salir");
+            System.out.println("4. Menu Pre-Examen");
+            System.out.println("Salir");
             System.out.print("Seleccione una opción: ");
 
             if (teclado.hasNextInt()) {
@@ -35,7 +37,12 @@ public class Main {
                     case 3:
                         menuRandom(claseRandom, teclado);
                         volverMenu();
-                    case 11:
+                        break;
+                    case 4:
+                        preExamen(bateriasProblemasPreExamen, teclado);
+                        volverMenu();
+                        break;
+                    case 0:
                         System.out.println("Saliendo del programa...");
                         break;
                     default:
@@ -101,7 +108,7 @@ public class Main {
                         bucles.ejercicio8();
                         volverMenu();
                         break;
-                    case 9:
+                    case 0:
                         System.out.println("Volviendo al Menú Principal...");
                         break;
                     default:
@@ -175,9 +182,11 @@ public class Main {
                         claseRandom.ejercicioRandom4();
                         volverMenu();
                         break;
-                    case 5:
+                    case 0:
                         System.out.println("Volviendo al Menú Principal...");
                         break;
+                    default:
+                        System.out.println("Opción no válida. Elija entre 1 y 4.");
                 }
             }else {
                 System.out.println("Por favor, introduzca un número válido.");
@@ -188,7 +197,69 @@ public class Main {
 
     }
 
-    public static void volverMenu() {
+    private static void preExamen(bateriasProblemas_preExamen bateriasProblemasPreExamen, Scanner teclado) {
+        int opcionPrexamen;
+        do {
+            System.out.println("\n --- Menu Pre-Examen ---");
+            System.out.println("1. Ejercicio 1");
+            System.out.println("2. Ejercicio 2");
+            System.out.println("3. Ejercicio 3");
+            System.out.println("4. Ejercicio 4");
+            System.out.println("5. Ejercicio 5");
+            System.out.println("5. Ejercicio 6");
+            System.out.println("5. Ejercicio 7");
+            System.out.println("Volver al Menú Principal");
+            System.out.print("Seleccione una opción: ");
+
+            if (teclado.hasNextInt()){
+                opcionPrexamen = teclado.nextInt();
+                switch (opcionPrexamen){
+                    case 1:
+                        bateriasProblemasPreExamen.ejercicio1();
+                        volverMenu();
+                        break;
+                    case 2:
+                        bateriasProblemasPreExamen.ejercicio2();
+                        volverMenu();
+                        break;
+                    case 3:
+                        bateriasProblemasPreExamen.ejercicio3();
+                        volverMenu();
+                        break;
+                    case 4:
+                        bateriasProblemasPreExamen.ejercicio4();
+                        volverMenu();
+                        break;
+                    case 5:
+                        bateriasProblemasPreExamen.ejercicio5();
+                        volverMenu();
+                        break;
+                    case 6:
+                        bateriasProblemasPreExamen.ejercicio6();
+                        volverMenu();
+                        break;
+                    case 7:
+                        bateriasProblemasPreExamen.ejercicio7();
+                        volverMenu();
+                        break;
+                    case 0:
+                        System.out.println("Volviendo al Menú Principal...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida. Elija entre 1 y 7.");
+                }
+            }else {
+                System.out.println("Por favor, introduzca un número válido.");
+                teclado.next();
+                opcionPrexamen = 0;
+            }
+
+        }while (opcionPrexamen != 8);
+    }
+
+
+
+    private static void volverMenu() {
 
         Scanner teclado = new Scanner(System.in);
 
