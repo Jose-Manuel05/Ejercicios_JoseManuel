@@ -11,6 +11,7 @@ public class Main {
         Exepciones excepciones = new Exepciones();
         claseRandom claseRandom = new claseRandom();
         bateriasProblemas_preExamen bateriasProblemasPreExamen = new bateriasProblemas_preExamen();
+        vector vector = new vector();
 
         do {
             // Menú Principal
@@ -19,6 +20,7 @@ public class Main {
             System.out.println("2. Menu Excepciones");
             System.out.println("3. Menu Random");
             System.out.println("4. Menu Pre-Examen");
+            System.out.println("5. Menu Vectores");
             System.out.println("Salir");
             System.out.print("Seleccione una opción: ");
 
@@ -42,11 +44,15 @@ public class Main {
                         preExamen(bateriasProblemasPreExamen, teclado);
                         volverMenu();
                         break;
+                    case 5:
+                        vector(vector, teclado);
+                        volverMenu();
+                        break;
                     case 0:
                         System.out.println("Saliendo del programa...");
                         break;
                     default:
-                        System.out.println("Opción no válida. Por favor, elija entre 1 y 3.");
+                        System.out.println("Elije una opcion del menu");
                 }
             } else {
                 System.out.println("Por favor, introduzca un número válido.");
@@ -137,7 +143,7 @@ public class Main {
                         excepciones.exepciones();
                         volverMenu();
                         break;
-                    case 2:
+                    case 0:
                         System.out.println("Volviendo al Menú Principal...");
                         volverMenu();
                         break;
@@ -257,7 +263,83 @@ public class Main {
         }while (opcionPrexamen != 8);
     }
 
+    private static void vector(vector vector, Scanner teclado) {
+        int opcionArrays = 0;
+        do {
+            System.out.println("\n --- Menu Array ---");
+            System.out.println("0. Prueba Vector");
+            System.out.println("1. Ejercicio 1");
+            System.out.println("2. Ejercicio 2");
+            System.out.println("3. Ejercicio 3");
+            System.out.println("4. Ejercicio 4");
+            System.out.println("5. Ejercicio 5");
+            System.out.println("6. Ejercicio 6");
+            System.out.println("7. Ejercicio 7");
+            System.out.println("8. Ejercicio 8");
+            System.out.println("8. Ejercicio 9");
+            System.out.println("10. Ejercicio 10");
+            System.out.println("11. Vector Evo");
+            System.out.print("Seleccione una opción: ");
 
+            if (teclado.hasNextInt()) {
+                opcionArrays = teclado.nextInt();
+                switch (opcionArrays) {
+                    case 0:
+                        vector.pruebaVector();
+                        volverMenu();
+                        break;
+                    case 1:
+                        vector.bateriaEj1();
+                        volverMenu();
+                        break;
+                    case 2:
+                        vector.bateriaEj2();
+                        volverMenu();
+                        break;
+                    case 3:
+                        vector.bateriaEj3();
+                        volverMenu();
+                        break;
+                    case 4:
+                        vector.bateriaEj4();
+                        volverMenu();
+                        break;
+                    case 5:
+                        vector.bateriaEj5();
+                        volverMenu();
+                        break;
+                    case 6:
+                        vector.bateriaEj6();
+                        volverMenu();
+                        break;
+                    case 7:
+                        vector.bateriaEj7();
+                        volverMenu();
+                        break;
+                    case 8:
+                        vector.bateriaEj8();
+                        volverMenu();
+                        break;
+                    case 9:
+                        vector.bateriaEj9();
+                        volverMenu();
+                        break;
+                    case 10:
+                        vector.bateriaEj10();
+                        volverMenu();
+                        break;
+                    case 11:
+                        vector.vectoresEvo();
+                        volverMenu();
+                        break;
+                    default:
+                        System.out.println("Presione enter para salir al menu principal");
+
+                }
+
+            }
+        } while (opcionArrays != 11);
+    }
 
     private static void volverMenu() {
 
