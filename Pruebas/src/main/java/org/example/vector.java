@@ -219,7 +219,7 @@ public class vector {
 
     public void bateriaEj7() {
 
-        int num1[] = {1,2,3}, num2[] = {4,5,6};
+        int num1[] = {1, 2, 3}, num2[] = {4, 5, 6};
 
         int numCombinado[] = new int[num1.length + num2.length];
 
@@ -252,13 +252,69 @@ public class vector {
 
     public void bateriaEj8() {
 
+        Scanner teclado = new Scanner(System.in);
+
+        int numeros[] = {1,2,3,5};
+        int nuevaPosicion [] = new int[numeros.length +1];
+
+        System.out.println("Cadena original de numeros: " + Arrays.toString(numeros));
+
+        System.out.println("Dime el numero que deseas introducir en la cadena: ");
+        int newNumero = teclado.nextInt();
+
+        System.out.println("Dime la posicion en la que deseas el nuevo numero: ");
+        int newPosicion = teclado.nextInt();
+
+        for (int i = 0, j = 0; i < nuevaPosicion.length; i++) {
+            if (i == newPosicion - 1) {
+                nuevaPosicion[i] = newNumero;
+            } else {
+                nuevaPosicion[i] = numeros[j];
+                j++;
+            }
+        }
+
+        System.out.print("Array resultante: ");
+        for (int num : nuevaPosicion) {
+            System.out.print(num + " ");
+        }
+
     }
 
     public void bateriaEj9() {
 
+        String palabras[] = {"sol","elefante", "gato", "mariposa", "cocodrilo"};
+
+        String palabraMasLarga = "";
+
+        for (String palabra : palabras){
+            if (palabra.length() > palabraMasLarga.length()){
+                palabraMasLarga = palabra;
+            }
+        }
+
+        System.out.println("La palabra mas larga es: " + palabraMasLarga);
+
     }
 
     public void bateriaEj10() {
+
+        Scanner teclado = new Scanner(System.in);
+
+        String palabras[] = {"sol","elefante", "gato", "mariposa", "cocodrilo"};
+
+        System.out.println("Ingresa una letra: ");
+        char letra = teclado.next().charAt(0);
+
+        System.out.println("Palabras que comienzan por " + letra +":");
+        boolean encontrado = false;
+
+        for (String palabra : palabras) {
+            if (Character.toLowerCase(palabra.charAt(0)) == letra) {
+                System.out.println(palabra);
+                encontrado = true;
+            }
+        }
 
     }
 }
