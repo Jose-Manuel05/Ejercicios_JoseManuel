@@ -12,78 +12,81 @@ public class Batalla_Samurais {
 
         int[] equipo1 = new int[7];
         int[] equipo2 = new int[7];
+        boolean equipoCompeto = false;
 
         System.out.println("Equipo 1: ");
-        while (true){
+        while (!equipoCompeto){
             System.out.println("Introduce la potencia del equipo: ");
             String equipo1Potencia = teclado.nextLine();
             String[] potencias = equipo1Potencia.split(" ");
 
             int sumaPotencias = 0;
-            boolean valido = true;
+            boolean valido  = true ;
 
-            if (potencias.length != 7){
+            if (potencias.length == 7){
+                for (int i = 0; i < 7; i++) {
+                    try {
+                        equipo1[i] = Integer.parseInt(potencias[i]);
+                        sumaPotencias += equipo1[i];
+                    } catch (NumberFormatException e) {
+                        System.out.println("ERROR, se ha detectado una letra o carácter no numérico en las potencias. Asegúrate de introducir solo números enteros.");
+                        valido = false;
+                        break;
+                    }
+                }
+            }else {
                 System.out.println("Error, debes introducir 7 valores.");
                 continue;
-            }
-
-            for (int i = 0; i < 7; i++) {
-                try {
-                    equipo1[i] = Integer.parseInt(potencias[i]);
-                    sumaPotencias += equipo1[i];
-                } catch (NumberFormatException e) {
-                    System.out.println("ERROR, se ha detectado una letra o carácter no numérico en las potencias. Asegúrate de introducir solo números enteros.");
-                    valido = false;
-                    break;
-                }
             }
 
             if (!valido){
                 continue;
             }
 
-            if (sumaPotencias != 30) {
-                System.out.println("ERROR. La potencia total debe sumar 30.");
-            } else {
+            if (sumaPotencias == 30) {
                 System.out.println("Equipo completado.");
+                break;
+            } else {
+                System.out.println("ERROR. La potencia total debe sumar 30.");
                 break;
             }
 
         }
 
         System.out.println("Equipo 2: ");
-        while (true){
+        while (!equipoCompeto){
             System.out.println("Introduce la potencia del equipo: ");
             String equipo2Potencia = teclado.nextLine();
             String[] potencias = equipo2Potencia.split(" ");
 
-            if (potencias.length != 7){
+            int sumaPotencias = 0;
+            boolean valido  = true ;
+
+            if (potencias.length == 7){
+                for (int i = 0; i < 7; i++) {
+                    try {
+                        equipo2[i] = Integer.parseInt(potencias[i]);
+                        sumaPotencias += equipo2[i];
+                    } catch (NumberFormatException e) {
+                        System.out.println("ERROR, se ha detectado una letra o carácter no numérico en las potencias. Asegúrate de introducir solo números enteros.");
+                        valido = false;
+                        break;
+                    }
+                }
+            }else {
                 System.out.println("Error, debes introducir 7 valores.");
                 continue;
-            }
-
-            int sumaPotencias = 0;
-            boolean valido = true;
-
-            for (int i = 0; i < 7; i++) {
-                try {
-                    equipo2[i] = Integer.parseInt(potencias[i]);
-                    sumaPotencias += equipo2[i];
-                } catch (NumberFormatException e) {
-                    System.out.println("ERROR, se ha detectado una letra o carácter no numérico en las potencias. Asegúrate de introducir solo números enteros.");
-                    valido = false;
-                    break;
-                }
             }
 
             if (!valido){
                 continue;
             }
 
-            if (sumaPotencias != 30) {
-                System.out.println("ERROR. La potencia total debe sumar 30.");
-            } else {
+            if (sumaPotencias == 30) {
                 System.out.println("Equipo completado.");
+                break;
+            } else {
+                System.out.println("ERROR. La potencia total debe sumar 30.");
                 break;
             }
 
@@ -128,5 +131,4 @@ public class Batalla_Samurais {
         }
 
     }
-
 }
