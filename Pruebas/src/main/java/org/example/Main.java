@@ -267,7 +267,6 @@ public class Main {
         int opcionArrays = 0;
         do {
             System.out.println("\n --- Menu Array ---");
-            System.out.println("0. Prueba Vector");
             System.out.println("1. Ejercicio 1");
             System.out.println("2. Ejercicio 2");
             System.out.println("3. Ejercicio 3");
@@ -278,16 +277,14 @@ public class Main {
             System.out.println("8. Ejercicio 8");
             System.out.println("8. Ejercicio 9");
             System.out.println("10. Ejercicio 10");
-            System.out.println("11. Vector Evo");
+            System.out.println("11. Prueba Vector");
+            System.out.println("12. Vector Evo");
+            System.out.println("13. Navidad");
             System.out.print("Seleccione una opción: ");
 
             if (teclado.hasNextInt()) {
                 opcionArrays = teclado.nextInt();
                 switch (opcionArrays) {
-                    case 0:
-                        vector.pruebaVector();
-                        volverMenu();
-                        break;
                     case 1:
                         vector.bateriaEj1();
                         volverMenu();
@@ -329,7 +326,15 @@ public class Main {
                         volverMenu();
                         break;
                     case 11:
+                        vector.pruebaVector();
+                        volverMenu();
+                        break;
+                    case 12:
                         vector.vectoresEvo();
+                        volverMenu();
+                        break;
+                    case 13:
+                        vector.navidad();
                         volverMenu();
                         break;
                     default:

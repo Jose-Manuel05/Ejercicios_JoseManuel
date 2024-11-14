@@ -62,6 +62,65 @@ public class vector {
 
     }
 
+    public void navidad() {
+
+        Scanner teclado = new Scanner(System.in);
+
+        final String PALABRA = "NAVIDAD";
+
+        String[] palabras = PALABRA.split("");
+
+        System.out.println(Arrays.toString(palabras));
+        System.out.println("Introduce la cantidad de letras que quieres: ");
+        String cantidad = teclado.nextLine();
+        String[] cantidades = cantidad.split(" ");
+
+        String resultado = "";
+
+        System.out.println(Arrays.toString(cantidades));
+
+        for (int i = 0; i < cantidades.length ; i++){
+
+            for (int j = 0 ; j < Integer.parseInt(cantidades[i]) ; j++){
+
+                resultado = resultado + palabras[i];
+
+            }
+
+        }
+
+        System.out.println(resultado);
+
+    }
+
+    public void buscar() {
+
+        String[] nombres ={"Paco", "Pepe", "Ximo", "Alfonso"};
+
+        String palabra_buscar = "Pepe";
+
+        boolean existe = Arrays.asList(nombres).contains(palabra_buscar);
+
+        if (existe) {
+            System.out.println(palabra_buscar + "existe.");
+        }else {
+            System.out.println(palabra_buscar + "no existe en el vector");
+        }
+
+        Integer[] numeros = {3,5,6,7,24,39};
+
+        int num = 25;
+
+        boolean num_existe = Arrays.asList(numeros).contains(num);
+
+        if (num_existe){
+            System.out.println(num + "existe en el array.");
+        }else {
+            System.out.println(num + "no existe en el array");
+        }
+
+    }
+
     public void bateriaEj1(){
 
         int numeros[] = new int[8], suma = 0;
