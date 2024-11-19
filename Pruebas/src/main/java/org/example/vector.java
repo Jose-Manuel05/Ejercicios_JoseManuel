@@ -121,6 +121,20 @@ public class vector {
 
     }
 
+    public void ordenacion() {
+        int[] vector ={7,8,1,4,6};
+
+        int numero = 4;
+
+        int posicion = Arrays.binarySearch(vector,numero);
+        System.out.println(posicion);
+
+        Arrays.sort((vector));
+        System.out.println(Arrays.toString(vector));
+
+
+    }
+
     public void bateriaEj1(){
 
         int numeros[] = new int[8], suma = 0;

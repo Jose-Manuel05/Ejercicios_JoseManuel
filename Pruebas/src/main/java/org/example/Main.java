@@ -280,6 +280,8 @@ public class Main {
             System.out.println("11. Prueba Vector");
             System.out.println("12. Vector Evo");
             System.out.println("13. Navidad");
+            System.out.println("14. Buscar");
+            System.out.println("15. Ordenacion");
             System.out.print("Seleccione una opción: ");
 
             if (teclado.hasNextInt()) {
@@ -335,6 +337,14 @@ public class Main {
                         break;
                     case 13:
                         vector.navidad();
+                        volverMenu();
+                        break;
+                    case 14:
+                        vector.buscar();
+                        volverMenu();
+                        break;
+                    case 15:
+                        vector.ordenacion();
                         volverMenu();
                         break;
                     default:
