@@ -9,7 +9,7 @@ public class simulacionSorteo {
     public void practica1() {
 
         Scanner scanner = new Scanner(System.in);
-
+        Random aleatorio = new Random();
 
         System.out.println("Introduce tu boleto en formato N-N-N-N-N-N/R:");
         String boleto = scanner.nextLine();
@@ -36,7 +36,6 @@ public class simulacionSorteo {
             return;
         }
 
-        Random aleatorio = new Random();
         int[] numerosSorteo = new int[6];
         int indice = 0;
 
@@ -66,10 +65,6 @@ public class simulacionSorteo {
 
         int reintegroSorteo = aleatorio.nextInt(10);
 
-        System.out.println("Números sorteados: " + Arrays.toString(numerosSorteo));
-        System.out.println("Número complementario: " + numeroComplementario);
-        System.out.println("Reintegro sorteado: " + reintegroSorteo);
-
         int aciertos = 0;
         for (int i = 0; i < numerosUsuario.length; i++) {
             for (int j = 0; j < numerosSorteo.length; j++) {
@@ -80,16 +75,8 @@ public class simulacionSorteo {
             }
         }
 
-        for (int i = 0; i < numerosUsuario.length; i++) {
-            for (int j = 0; j < numerosSorteo.length; j++) {
-                if (numerosUsuario[i] == numerosSorteo[j]) {
-                    aciertos++;
-                    break;
-                }
-            }
-        }
-
         boolean complementarioAcertado = false;
+
         boolean reintegroAcertado = reintegroUsuario == reintegroSorteo;
 
         String categoria;
@@ -111,6 +98,9 @@ public class simulacionSorteo {
             categoria = "No premiado";
         }
 
+        System.out.println("Números sorteados: " + Arrays.toString(numerosSorteo));
+        System.out.println("Número complementario: " + numeroComplementario);
+        System.out.println("Reintegro sorteado: " + reintegroSorteo);
         System.out.println("Categoría de premio: " + categoria);
     }
 }
