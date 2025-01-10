@@ -82,433 +82,443 @@ public class Main {
         teclado.close();
     }
 
-    private static void menuBucles(Bucles bucles, Scanner teclado) {
-        int opcionBucles;
-        do {
-            System.out.println("\n--- Menú Bucles ---");
-            System.out.println("0. Salir");
-            System.out.println("1. Ejecutar Ejercicio 1");
-            System.out.println("2. Ejecutar Ejercicio 2");
-            System.out.println("3. Ejecutar Ejercicio 3");
-            System.out.println("4. Ejecutar Ejercicio 4");
-            System.out.println("5. Ejecutar Ejercicio 5");
-            System.out.println("6. Ejecutar Ejercicio 6");
-            System.out.println("7. Ejecutar Ejercicio 7");
-            System.out.println("8. Ejecutar Ejercicio 8");
-            System.out.println("9. Volver al Menú Principal");
-            System.out.print("Seleccione una opción: ");
+        private static void menuBucles(Bucles bucles, Scanner teclado) {
+            int opcionBucles;
+            do {
+                System.out.println("\n--- Menú Bucles ---");
+                System.out.println("0. Salir");
+                System.out.println("1. Ejecutar Ejercicio 1");
+                System.out.println("2. Ejecutar Ejercicio 2");
+                System.out.println("3. Ejecutar Ejercicio 3");
+                System.out.println("4. Ejecutar Ejercicio 4");
+                System.out.println("5. Ejecutar Ejercicio 5");
+                System.out.println("6. Ejecutar Ejercicio 6");
+                System.out.println("7. Ejecutar Ejercicio 7");
+                System.out.println("8. Ejecutar Ejercicio 8");
+                System.out.println("9. Volver al Menú Principal");
+                System.out.print("Seleccione una opción: ");
 
-            if (teclado.hasNextInt()) {
-                opcionBucles = teclado.nextInt();
-                switch (opcionBucles) {
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        break;
-                    case 1:
-                        bucles.ejercicio1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        bucles.ejercicio2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        bucles.ejercicio3();
-                        volverMenu();
-                        break;
-                    case 4:
-                        bucles.ejercicio4();
-                        volverMenu();
-                        break;
-                    case 5:
-                        bucles.ejercicio5();
-                        volverMenu();
-                        break;
-                    case 6:
-                        bucles.ejercicio6();
-                        volverMenu();
-                        break;
-                    case 7:
-                        bucles.ejercicio7();
-                        volverMenu();
-                        break;
-                    case 8:
-                        bucles.ejercicio8();
-                        volverMenu();
-                        break;
+                if (teclado.hasNextInt()) {
+                    opcionBucles = teclado.nextInt();
+                    switch (opcionBucles) {
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            break;
+                        case 1:
+                            bucles.ejercicio1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            bucles.ejercicio2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            bucles.ejercicio3();
+                            volverMenu();
+                            break;
+                        case 4:
+                            bucles.ejercicio4();
+                            volverMenu();
+                            break;
+                        case 5:
+                            bucles.ejercicio5();
+                            volverMenu();
+                            break;
+                        case 6:
+                            bucles.ejercicio6();
+                            volverMenu();
+                            break;
+                        case 7:
+                            bucles.ejercicio7();
+                            volverMenu();
+                            break;
+                        case 8:
+                            bucles.ejercicio8();
+                            volverMenu();
+                            break;
 
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 9.");
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 9.");
+                    }
+                } else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionBucles = 0;
                 }
-            } else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionBucles = 0;
-            }
-        } while (opcionBucles != 9);
-    }
+            } while (opcionBucles != 9);
+        }
 
-    private static void menuExcepciones(Exepciones excepciones, Scanner teclado) {
-        int opcionExcepciones;
-        do {
-            System.out.println("\n--- Menú Excepciones ---");
-            System.out.println("1. Ejecutar Manejo de Excepción 1");
-            System.out.println("2. Volver al Menú Principal");
-            System.out.print("Seleccione una opción: ");
+        private static void menuExcepciones(Exepciones excepciones, Scanner teclado) {
+            int opcionExcepciones;
+            do {
+                System.out.println("\n--- Menú Excepciones ---");
+                System.out.println("1. Ejecutar Manejo de Excepción 1");
+                System.out.println("2. Volver al Menú Principal");
+                System.out.print("Seleccione una opción: ");
 
-            if (teclado.hasNextInt()) {
-                opcionExcepciones = teclado.nextInt();
-                switch (opcionExcepciones) {
-                    case 1:
-                        excepciones.exepciones();
-                        volverMenu();
-                        break;
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        volverMenu();
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 3.");
+                if (teclado.hasNextInt()) {
+                    opcionExcepciones = teclado.nextInt();
+                    switch (opcionExcepciones) {
+                        case 1:
+                            excepciones.exepciones();
+                            volverMenu();
+                            break;
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            volverMenu();
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 3.");
+                    }
+                } else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionExcepciones = 0;
                 }
-            } else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionExcepciones = 0;
-            }
-        } while (opcionExcepciones != 2);
-    }
+            } while (opcionExcepciones != 2);
+        }
 
-    private static void menuRandom(claseRandom claseRandom, Scanner teclado) {
-        int opcionRandom;
-        do {
-            System.out.println("\n --- Menu Random ---");
-            System.out.println("1. Ejercicio 1");
-            System.out.println("2. Ejercicio 2");
-            System.out.println("3. Ejercicio 3 ");
-            System.out.println("4. Ejercicio 4");
-            System.out.println("5. Volver al Menú Principal");
-            System.out.print("Seleccione una opción: ");
+        private static void menuRandom(claseRandom claseRandom, Scanner teclado) {
+            int opcionRandom;
+            do {
+                System.out.println("\n --- Menu Random ---");
+                System.out.println("1. Ejercicio 1");
+                System.out.println("2. Ejercicio 2");
+                System.out.println("3. Ejercicio 3 ");
+                System.out.println("4. Ejercicio 4");
+                System.out.println("5. Volver al Menú Principal");
+                System.out.print("Seleccione una opción: ");
 
-            if (teclado.hasNextInt()){
-                opcionRandom = teclado.nextInt();
-                switch (opcionRandom){
-                    case 1:
-                        claseRandom.ejercicioRandom1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        claseRandom.ejercicioRandom2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        claseRandom.ejercicioRandom3();
-                        volverMenu();
-                        break;
-                    case 4:
-                        claseRandom.ejercicioRandom4();
-                        volverMenu();
-                        break;
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 4.");
+                if (teclado.hasNextInt()){
+                    opcionRandom = teclado.nextInt();
+                    switch (opcionRandom){
+                        case 1:
+                            claseRandom.ejercicioRandom1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            claseRandom.ejercicioRandom2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            claseRandom.ejercicioRandom3();
+                            volverMenu();
+                            break;
+                        case 4:
+                            claseRandom.ejercicioRandom4();
+                            volverMenu();
+                            break;
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 4.");
+                    }
+                }else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionRandom = 0;
                 }
-            }else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionRandom = 0;
-            }
-        }while (opcionRandom != 5);
+            }while (opcionRandom != 5);
 
-    }
+        }
 
-    private static void preExamen(bateriasProblemas_preExamen bateriasProblemasPreExamen, Scanner teclado) {
-        int opcionPrexamen;
-        do {
-            System.out.println("\n --- Menu Pre-Examen ---");
-            System.out.println("1. Ejercicio 1");
-            System.out.println("2. Ejercicio 2");
-            System.out.println("3. Ejercicio 3");
-            System.out.println("4. Ejercicio 4");
-            System.out.println("5. Ejercicio 5");
-            System.out.println("5. Ejercicio 6");
-            System.out.println("5. Ejercicio 7");
-            System.out.println("Volver al Menú Principal");
-            System.out.print("Seleccione una opción: ");
+        private static void preExamen(bateriasProblemas_preExamen bateriasProblemasPreExamen, Scanner teclado) {
+            int opcionPrexamen;
+            do {
+                System.out.println("\n --- Menu Pre-Examen ---");
+                System.out.println("1. Ejercicio 1");
+                System.out.println("2. Ejercicio 2");
+                System.out.println("3. Ejercicio 3");
+                System.out.println("4. Ejercicio 4");
+                System.out.println("5. Ejercicio 5");
+                System.out.println("5. Ejercicio 6");
+                System.out.println("5. Ejercicio 7");
+                System.out.println("Volver al Menú Principal");
+                System.out.print("Seleccione una opción: ");
 
-            if (teclado.hasNextInt()){
-                opcionPrexamen = teclado.nextInt();
-                switch (opcionPrexamen){
-                    case 1:
-                        bateriasProblemasPreExamen.ejercicio1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        bateriasProblemasPreExamen.ejercicio2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        bateriasProblemasPreExamen.ejercicio3();
-                        volverMenu();
-                        break;
-                    case 4:
-                        bateriasProblemasPreExamen.ejercicio4();
-                        volverMenu();
-                        break;
-                    case 5:
-                        bateriasProblemasPreExamen.ejercicio5();
-                        volverMenu();
-                        break;
-                    case 6:
-                        bateriasProblemasPreExamen.ejercicio6();
-                        volverMenu();
-                        break;
-                    case 7:
-                        bateriasProblemasPreExamen.ejercicio7();
-                        volverMenu();
-                        break;
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 7.");
-                }
-            }else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionPrexamen = 0;
-            }
-
-        }while (opcionPrexamen != 8);
-    }
-
-    private static void vector(vector vector, Scanner teclado) {
-        int opcionArrays = 0;
-        do {
-            System.out.println("\n --- Menu Array ---");
-            System.out.println("1. Ejercicio 1");
-            System.out.println("2. Ejercicio 2");
-            System.out.println("3. Ejercicio 3");
-            System.out.println("4. Ejercicio 4");
-            System.out.println("5. Ejercicio 5");
-            System.out.println("6. Ejercicio 6");
-            System.out.println("7. Ejercicio 7");
-            System.out.println("8. Ejercicio 8");
-            System.out.println("8. Ejercicio 9");
-            System.out.println("10. Ejercicio 10");
-            System.out.println("11. Prueba Vector");
-            System.out.println("12. Vector Evo");
-            System.out.println("13. Navidad");
-            System.out.println("14. Buscar");
-            System.out.println("15. Ordenacion");
-            System.out.print("Seleccione una opción: ");
-
-            if (teclado.hasNextInt()) {
-                opcionArrays = teclado.nextInt();
-                switch (opcionArrays) {
-                    case 1:
-                        vector.bateriaEj1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        vector.bateriaEj2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        vector.bateriaEj3();
-                        volverMenu();
-                        break;
-                    case 4:
-                        vector.bateriaEj4();
-                        volverMenu();
-                        break;
-                    case 5:
-                        vector.bateriaEj5();
-                        volverMenu();
-                        break;
-                    case 6:
-                        vector.bateriaEj6();
-                        volverMenu();
-                        break;
-                    case 7:
-                        vector.bateriaEj7();
-                        volverMenu();
-                        break;
-                    case 8:
-                        vector.bateriaEj8();
-                        volverMenu();
-                        break;
-                    case 9:
-                        vector.bateriaEj9();
-                        volverMenu();
-                        break;
-                    case 10:
-                        vector.bateriaEj10();
-                        volverMenu();
-                        break;
-                    case 11:
-                        vector.pruebaVector();
-                        volverMenu();
-                        break;
-                    case 12:
-                        vector.vectoresEvo();
-                        volverMenu();
-                        break;
-                    case 13:
-                        vector.navidad();
-                        volverMenu();
-                        break;
-                    case 14:
-                        vector.buscar();
-                        volverMenu();
-                        break;
-                    case 15:
-                        vector.ordenacion();
-                        volverMenu();
-                        break;
-                    default:
-                        System.out.println("Presione enter para salir al menu principal");
-
+                if (teclado.hasNextInt()){
+                    opcionPrexamen = teclado.nextInt();
+                    switch (opcionPrexamen){
+                        case 1:
+                            bateriasProblemasPreExamen.ejercicio1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            bateriasProblemasPreExamen.ejercicio2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            bateriasProblemasPreExamen.ejercicio3();
+                            volverMenu();
+                            break;
+                        case 4:
+                            bateriasProblemasPreExamen.ejercicio4();
+                            volverMenu();
+                            break;
+                        case 5:
+                            bateriasProblemasPreExamen.ejercicio5();
+                            volverMenu();
+                            break;
+                        case 6:
+                            bateriasProblemasPreExamen.ejercicio6();
+                            volverMenu();
+                            break;
+                        case 7:
+                            bateriasProblemasPreExamen.ejercicio7();
+                            volverMenu();
+                            break;
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 7.");
+                    }
+                }else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionPrexamen = 0;
                 }
 
-            }
-        } while (opcionArrays != 11);
-    }
+            }while (opcionPrexamen != 8);
+        }
 
-    private static void buclesAnidados(buclesAnidados buclesAnidados, Scanner teclado) {
-        int opcionBuclesAnidados;
-        do {
-            System.out.println("\n--- Menú Excepciones ---");
-            System.out.println("1. Ejercicio 2");
-            System.out.println("2. Ejercicio 3");
-            System.out.println("3. Ejercicio 4");
-            System.out.println("0. Salir");
-            System.out.print("Seleccione una opción: ");
+        private static void vector(vector vector, Scanner teclado) {
+            int opcionArrays = 0;
+            do {
+                System.out.println("\n --- Menu Array ---");
+                System.out.println("1. Ejercicio 1");
+                System.out.println("2. Ejercicio 2");
+                System.out.println("3. Ejercicio 3");
+                System.out.println("4. Ejercicio 4");
+                System.out.println("5. Ejercicio 5");
+                System.out.println("6. Ejercicio 6");
+                System.out.println("7. Ejercicio 7");
+                System.out.println("8. Ejercicio 8");
+                System.out.println("8. Ejercicio 9");
+                System.out.println("10. Ejercicio 10");
+                System.out.println("11. Prueba Vector");
+                System.out.println("12. Vector Evo");
+                System.out.println("13. Navidad");
+                System.out.println("14. Buscar");
+                System.out.println("15. Ordenacion");
+                System.out.print("Seleccione una opción: ");
 
-            if (teclado.hasNextInt()) {
-                opcionBuclesAnidados = teclado.nextInt();
-                switch (opcionBuclesAnidados) {
+                if (teclado.hasNextInt()) {
+                    opcionArrays = teclado.nextInt();
+                    switch (opcionArrays) {
+                        case 1:
+                            vector.bateriaEj1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            vector.bateriaEj2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            vector.bateriaEj3();
+                            volverMenu();
+                            break;
+                        case 4:
+                            vector.bateriaEj4();
+                            volverMenu();
+                            break;
+                        case 5:
+                            vector.bateriaEj5();
+                            volverMenu();
+                            break;
+                        case 6:
+                            vector.bateriaEj6();
+                            volverMenu();
+                            break;
+                        case 7:
+                            vector.bateriaEj7();
+                            volverMenu();
+                            break;
+                        case 8:
+                            vector.bateriaEj8();
+                            volverMenu();
+                            break;
+                        case 9:
+                            vector.bateriaEj9();
+                            volverMenu();
+                            break;
+                        case 10:
+                            vector.bateriaEj10();
+                            volverMenu();
+                            break;
+                        case 11:
+                            vector.pruebaVector();
+                            volverMenu();
+                            break;
+                        case 12:
+                            vector.vectoresEvo();
+                            volverMenu();
+                            break;
+                        case 13:
+                            vector.navidad();
+                            volverMenu();
+                            break;
+                        case 14:
+                            vector.buscar();
+                            volverMenu();
+                            break;
+                        case 15:
+                            vector.ordenacion();
+                            volverMenu();
+                            break;
+                        default:
+                            System.out.println("Presione enter para salir al menu principal");
 
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        volverMenu();
-                        break;
-                    case 1:
-                        buclesAnidados.prueba1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        buclesAnidados.tablaMutiplicar();
-                        volverMenu();
-                        break;
-                    case 3:
-                        buclesAnidados.ejerc4();
-                        volverMenu();
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 3.");
+                    }
+
                 }
-            } else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionBuclesAnidados = 0;
-            }
-        } while (opcionBuclesAnidados != 10);
+            } while (opcionArrays != 11);
+        }
 
-    }
+        private static void buclesAnidados(buclesAnidados buclesAnidados, Scanner teclado) {
+            int opcionBuclesAnidados;
+            do {
+                System.out.println("\n--- Menú Excepciones ---");
+                System.out.println("1. Ejercicio 2");
+                System.out.println("2. Ejercicio 3");
+                System.out.println("3. Ejercicio 4");
+                System.out.println("0. Salir");
+                System.out.print("Seleccione una opción: ");
 
-    private static void Matrices( Matries matrices, Scanner teclado) {
+                if (teclado.hasNextInt()) {
+                    opcionBuclesAnidados = teclado.nextInt();
+                    switch (opcionBuclesAnidados) {
 
-        int opcionesMatrices;
-        do {
-            System.out.println("\n--- Menú Excepciones ---");
-            System.out.println("0. Salir");
-            System.out.println("1. Prueba");
-            System.out.println("2. Prueba 2");
-            System.out.println("3. Prueba 3");
-            System.out.print("Seleccione una opción: ");
-
-            if (teclado.hasNextInt()) {
-                opcionesMatrices = teclado.nextInt();
-                switch (opcionesMatrices) {
-
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        volverMenu();
-                        return;
-                    case 1:
-                        matrices.prueba();
-                        volverMenu();
-                        break;
-                    case 2:
-                        matrices.prueba2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        matrices.prueba3();
-                        volverMenu();
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 3.");
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            volverMenu();
+                            break;
+                        case 1:
+                            buclesAnidados.prueba1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            buclesAnidados.tablaMutiplicar();
+                            volverMenu();
+                            break;
+                        case 3:
+                            buclesAnidados.ejerc4();
+                            volverMenu();
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 3.");
+                    }
+                } else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionBuclesAnidados = 0;
                 }
-            } else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionesMatrices = 0;
-            }
+            } while (opcionBuclesAnidados != 10);
+
+        }
+
+        private static void Matrices(Matries matrices, Scanner teclado) {
+
+            int opcionesMatrices;
+            do {
+                System.out.println("\n--- Menú Matrices ---");
+                System.out.println("0. Salir");
+                System.out.println("1. Prueba 1");
+                System.out.println("2. Prueba 2");
+                System.out.println("3. Prueba 3");
+                System.out.println("4. Prueba 4");
+                System.out.print("Seleccione una opción: ");
+
+                if (teclado.hasNextInt()) {
+                    opcionesMatrices = teclado.nextInt();
+                    switch (opcionesMatrices) {
+
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            volverMenu();
+                            return;
+                        case 1:
+                            matrices.prueba();
+                            volverMenu();
+                            break;
+                        case 2:
+                            matrices.prueba2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            matrices.prueba3();
+                            volverMenu();
+                            break;
+                        case 4:
+                            matrices.prueba4();
+                            volverMenu();
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 3.");
+                    }
+                } else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionesMatrices = 0;
+                }
+                } while (opcionesMatrices != 10);
+
+        }
+
+        private static void bateriaMatrices(bateriasMatrices bateriasMatrices, Scanner teclado) {
+
+            int opcionesMatrices;
+            do {
+                System.out.println("\n--- Menú Bateria Matrices ---");
+                System.out.println("0. Salir");
+                System.out.println("1. Practica 1");
+                System.out.println("2. Practica 2");
+                System.out.println("3. Practica 3");
+                System.out.print("Seleccione una opción: ");
+
+                if (teclado.hasNextInt()) {
+                    opcionesMatrices = teclado.nextInt();
+                    switch (opcionesMatrices) {
+
+                        case 0:
+                            System.out.println("Volviendo al Menú Principal...");
+                            volverMenu();
+                            return;
+                        case 1:
+                            bateriasMatrices.practica1();
+                            volverMenu();
+                            break;
+                        case 2:
+                            bateriasMatrices.practica2();
+                            volverMenu();
+                            break;
+                        case 3:
+                            bateriasMatrices.practica3();
+                            volverMenu();
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Elija entre 1 y 3.");
+                    }
+                } else {
+                    System.out.println("Por favor, introduzca un número válido.");
+                    teclado.next();
+                    opcionesMatrices = 0;
+                }
             } while (opcionesMatrices != 10);
 
-    }
+        }
 
-    private static void bateriaMatrices( bateriasMatrices bateriasMatrices, Scanner teclado) {
+        private static void volverMenu() {
 
-        int opcionesMatrices;
-        do {
-            System.out.println("\n--- Menú Bateria Matrices ---");
-            System.out.println("0. Salir");
-            System.out.println("1. Practica 1");
-            System.out.println("2. Practica 2");
-            System.out.println("3. Practica 3");
-            System.out.print("Seleccione una opción: ");
+            Scanner teclado = new Scanner(System.in);
 
-            if (teclado.hasNextInt()) {
-                opcionesMatrices = teclado.nextInt();
-                switch (opcionesMatrices) {
+            System.out.println("Presiona enter para salir... ");
+            teclado.nextLine();
+        }
 
-                    case 0:
-                        System.out.println("Volviendo al Menú Principal...");
-                        volverMenu();
-                        return;
-                    case 1:
-                        bateriasMatrices.practica1();
-                        volverMenu();
-                        break;
-                    case 2:
-                        bateriasMatrices.practica2();
-                        volverMenu();
-                        break;
-                    case 3:
-                        bateriasMatrices.practica3();
-                        volverMenu();
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Elija entre 1 y 3.");
-                }
-            } else {
-                System.out.println("Por favor, introduzca un número válido.");
-                teclado.next();
-                opcionesMatrices = 0;
-            }
-        } while (opcionesMatrices != 10);
 
-    }
 
-    private static void volverMenu() {
 
-        Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Presiona enter para salir... ");
-        teclado.nextLine();
-    }
 }

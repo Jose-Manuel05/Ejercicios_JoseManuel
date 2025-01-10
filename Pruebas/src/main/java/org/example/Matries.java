@@ -147,4 +147,43 @@ public class Matries {
         int n = teclado.nextInt();
 
     }
+
+    public void prueba4(){
+
+        Scanner telcado = new Scanner(System.in);
+
+        int[] vector = {3,4,5,3,2};
+
+        int[][] matriz = new int[2][vector.length];
+
+        for (int i = 0; i < vector.length; i++) {
+            matriz[0][i] = vector[i];
+        }
+
+        for (int[] filas: matriz){
+            for (int columnas : filas){
+                System.out.print(columnas + " ");
+            }
+            System.out.print("\n");
+        }
+
+        int[][] matriz2 = new int[3][4];
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.println("Introduce valores de la vila");
+            String[] fila = telcado.next().split(",");
+            for (int j = 0; j < matriz.length; j++) {
+                matriz2[i][j] = Integer.parseInt(fila[j]);
+
+            }
+        }
+
+        for (int[] filas: matriz2){
+            for (int columnas : filas){
+                System.out.print(columnas + " ");
+            }
+            System.out.print("\n");
+        }
+
+
+    }
 }
