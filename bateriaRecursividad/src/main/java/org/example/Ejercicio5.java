@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Ejercicio4 {
+public class Ejercicio5 {
 
     static Scanner scanner = new Scanner(System.in);
 
@@ -14,21 +14,33 @@ public class Ejercicio4 {
             System.out.println("El número " + numero + " es binario.");
         } else {
             System.out.println("El número " + numero + " no es binario.");
+            System.out.println("El número " + numero + " en binario es: " + Convertir(numero)+".");
         }
+
     }
 
-    public static boolean esBinario(int numero) {
+    public static boolean esBinario(int num) {
 
-        if(numero > 9) {
-            if(numero % 10 == 0 || numero % 10 == 1) {
-                return esBinario(numero / 10);
+        if(num > 9) {
+            if(num % 10 == 0 || num % 10 == 1) {
+                return esBinario(num / 10);
             }else {
                 return false;
             }
         }
 
-        return numero == 0 || numero == 1;
-
+        return num == 0 || num == 1;
 
     }
+
+    public static String Convertir (int num) {
+
+        if (num == 0 || num == 1) {
+            return Integer.toString(num);
+        }else {
+            return Convertir(num /  2) + num % 2;
+        }
+
+    }
+
 }
